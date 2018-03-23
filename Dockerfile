@@ -5,6 +5,8 @@ LABEL maintainer "opsxcq@strm.sh"
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     bitcoind \
+    bitcoin-tx \
+    bitcoin-qt \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
