@@ -14,8 +14,8 @@ RUN apt-get update && \
 RUN useradd --system --uid 666 -M --shell /usr/sbin/nologin bitcoind && \
     touch /etc/bitcoind.conf && \
     chown bitcoind:bitcoind /etc/bitcoind.conf && \
-    mkdir /data && \
-    chown -R bitcoind:bitcoind /data
+    mkdir /data /home/bitcoind && \
+    chown -R bitcoind:bitcoind /data /home/bitcoind
 USER bitcoind
 
 # API Ports
